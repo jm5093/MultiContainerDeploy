@@ -5,7 +5,7 @@ services:
   - docker
 
 before-install: 
-  - docker build -t jm5093/multi-docker -f ./client/Dockerfile.dev .
+  - docker build -t jm5093/multi-docker -f ./client/Dockerfile.dev ./client
 
 script:
   - docker run -e CI=true jm5093/multi-docker npm test
